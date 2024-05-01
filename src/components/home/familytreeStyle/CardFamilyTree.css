@@ -1,0 +1,52 @@
+.CardFamilyTree__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.CardFamilyTree__cardsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+}
+
+.CardFamilyTree__cardBird {
+  position: relative;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-shadow: 0 0 10px 1px rgb(169, 169, 169);
+  background-color: var(--body-beigeLigth);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.CardFamilyTree__cardBird img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.CardFamilyTree__cardBird p {
+  font-size: 14px;
+}
+
+.rowLeft1 {
+  position: absolute;
+  top: 100%;
+  left: -20%;
+  font-size: 40px;
+}
+
+.rightLeft1 {
+  position: absolute;
+  top: 100%;
+  right: -20%;
+  font-size: 40px;
+}
