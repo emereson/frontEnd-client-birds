@@ -2,6 +2,7 @@ import React from "react";
 import "./familytreeStyle/CardFamilyTree.css";
 
 const CardFamilyTree = ({ ancestors, bird }) => {
+  console.log(bird);
   return (
     <div className="CardFamilyTree__container">
       <article className="CardFamilyTree__cardBird">

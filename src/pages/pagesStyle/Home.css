@@ -95,12 +95,206 @@
   color: var(--text-color-white);
 }
 
-.page___sectionThree {
+.BirdId__sectionOne {
   width: 100%;
+  background-color: var(--body-black);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.BirdId__sectionOne_navigate {
+  display: flex;
+  align-items: center;
+  color: var(--body-white);
+  gap: 20px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.BirdId__sectionOne_navigate i {
+  font-size: 35px;
+}
+
+.BirdId__sectionOne__buttonsContainer {
+  display: flex;
+  gap: 20px;
+}
+.BirdId__sectionOne__buttonsContainer button {
+  font-size: 18px;
+  font-weight: 600;
+  width: 200px;
+  height: 50px;
+  padding: 0 15px;
+  border: 2px solid var(--body-white);
+  background-color: var(--body-white);
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+/* BirdId__sectionTwo */
+.BirdId__sectionTwo {
+  width: 100%;
+  padding: 20px;
+  padding-top: 0;
+  border-bottom: 2px solid var(--body-grayLigth);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: start;
   gap: 20px;
+}
+
+.BirdId__sectionTwo h1 {
+  color: var(--text-color-gray);
+  font-size: 30px;
+}
+
+.BirdId__sectionTwo ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 20px;
+}
+
+.BirdId__sectionTwo li {
+  width: 350px;
+  font-size: 18px;
+  font-weight: 600;
+  gap: 10px;
+  color: var(--text-color-gray);
+}
+.BirdId__sectionTwo b {
+  padding-right: 10px;
+}
+
+/* BirdId__sectionThree */
+.BirdId__sectionThree {
+  width: 100%;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-bottom: 2px solid var(--body-grayLigth);
+}
+
+.BirdId__sectionThree h2 {
+  font-size: 20px;
+}
+
+.BirdId__sectionThree__containerImages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
+}
+
+.BirdId__sectionThree__containerImages div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.BirdId__sectionThree__containerImages button {
+  width: 150px;
+  height: 40px;
+  background-color: var(--body-red);
+  color: var(--text-color-white);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.BirdId__sectionThree__containerImages img {
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+/* .BirdId__sectionFour */
+
+.BirdId__sectionFour {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.BirdId__sectionFour_article {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.BirdId__sectionFour_article h2 {
+  font-size: 20px;
+}
+
+.BirdId__sectionFour_article button {
+  font-size: 16px;
+  font-weight: 600;
+  width: 200px;
+  height: 50px;
+  padding: 0 15px;
+  background-color: var(--body-white);
+  border: 2px solid var(--body-darkBlue);
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.BirdId__sectionFour_article button:hover {
+  background-color: var(--body-darkBlue);
+  color: var(--text-color-white);
+}
+
+.BirdId__sectionFour__containerVideos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
+}
+
+.BirdId__sectionFour__containerVideos div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.BirdId__sectionFour__containerVideos button {
+  width: 150px;
+  height: 40px;
+  background-color: var(--body-red);
+  color: var(--text-color-white);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.BirdId__sectionFour__containerVideos video {
+  width: 330px;
+  height: 200px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  .page___sectionTwo__form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .page___sectionTwo__form div {
+    width: 100%;
+  }
 }
