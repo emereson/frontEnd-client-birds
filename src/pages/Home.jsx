@@ -37,8 +37,6 @@ const Home = () => {
     }
   }, [birdId]);
 
-  console.log(dataBird.bird);
-
   return (
     <div className="page__container">
       <section className="page___sectionTwo">
