@@ -37,6 +37,24 @@ const Home = () => {
     }
   }, [birdId]);
 
+  function calcularEdad(fechaNacimiento) {
+    const fechaNacimientoObj = new Date(fechaNacimiento);
+    const fechaActual = new Date();
+
+    // Calcular la diferencia entre las fechas en milisegundos
+    const diff = fechaActual - fechaNacimientoObj;
+
+    // Convertir la diferencia a un objeto de fecha
+    const diffDate = new Date(diff);
+
+    // Extraer años, meses y días de la diferencia
+    const años = diffDate.getUTCFullYear() - 1970; // 1970 es el año base en JavaScript
+    const meses = diffDate.getUTCMonth();
+    const dias = diffDate.getUTCDate() - 1; // Restar 1 porque getDate() devuelve el día del mes
+
+    return { años, meses, dias };
+  }
+
   return (
     <div className="page__container">
       <section className="page___sectionTwo">
@@ -106,7 +124,15 @@ const Home = () => {
                 <b>Peso del ave:</b> {dataBird?.bird?.weight}
               </li>
               <li>
-                <b>Edad:</b> {dataBird?.bird?.birthdate}
+                <b>Edad:</b>{" "}
+                <p>
+                  {calcularEdad(dataBird?.bird.birthdate).años} años,{" "}
+                  {calcularEdad(dataBird?.bird.birthdate).meses} meses y{" "}
+                  {calcularEdad(dataBird?.bird.birthdate).dias} días
+                </p>
+              </li>
+              <li>
+                <b>Fecha de nacimiento:</b> {dataBird?.bird.birthdate}
               </li>
               <li>
                 <b>Estado del ave: </b>

@@ -28,8 +28,9 @@
 .page___sectionTwo {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+
   padding: 20px;
 }
 
