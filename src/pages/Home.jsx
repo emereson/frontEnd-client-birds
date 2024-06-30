@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./pagesStyle/Home.css";
-import CardFamilyTree from "../components/home/CardFamilyTree";
 
 const Home = () => {
   const [allBirds, setallBirds] = useState();
@@ -10,16 +9,20 @@ const Home = () => {
   const [birdId, setbirdId] = useState();
 
   useEffect(() => {
-    const url = `${import.meta.env.VITE_URL_API}/birds?search=${search}`;
+    if (search.length > 0) {
+      const url = `${import.meta.env.VITE_URL_API}/birds?search=${search}`;
 
-    axios
-      .get(url)
-      .then((res) => {
-        setallBirds(res.data.birds);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+      axios
+        .get(url, config)
+        .then((res) => {
+          setallBirds(res.data.birds);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else {
+      setallBirds();
+    }
   }, [search]);
 
   useEffect(() => {
